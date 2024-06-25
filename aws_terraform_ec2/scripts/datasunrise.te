@@ -1,0 +1,121 @@
+policy_module(datasunrise, 1.0.1)
+########################################
+# Declarations
+########################################
+type datasunrise_t;
+type datasunrise_exec_t;
+init_daemon_domain(datasunrise_t, datasunrise_exec_t)
+type datasunrise_var_t;
+files_type(datasunrise_var_t)
+type datasunrise_port_t;
+corenet_port(datasunrise_port_t)
+#permissive datasunrise_t;
+require {
+	type bin_t;
+	type cgroup_t;
+	type cluster_port_t;
+	type commplex_main_port_t;
+	type ephemeral_port_t;
+	type fs_t;
+	type gear_port_t;
+	type gluster_port_t;
+	type hplip_port_t;
+	type http_port_t;
+	type keystone_port_t;
+	type ldap_port_t;
+	type mongod_port_t;
+	type mssql_port_t;
+	type mysqld_port_t;
+	type oracle_port_t;
+	type postgresql_port_t;
+	type proc_t;
+	type proc_net_t;
+	type random_device_t;
+	type shell_exec_t;
+	type smtp_port_t;
+	type sysctl_net_t;
+	type sysfs_t;
+	type tmp_t;
+	type tmpfs_t;
+	type unreserved_port_t;
+	type user_home_dir_t;
+	type user_t;
+	type usr_t;
+	class chr_file { getattr open read };
+	class dir { add_name create getattr open read remove_name rmdir search setattr write };
+	class file { append create execute execute_no_trans getattr ioctl lock open read setattr unlink write };
+	class filesystem getattr;
+	class lnk_file read;
+	class netlink_socket create;
+	class packet_socket create;
+	class tcp_socket { listen name_bind name_connect };
+}
+########################################
+allow datasunrise_t self:capability { setgid setuid };
+allow datasunrise_t self:fifo_file rw_fifo_file_perms;
+allow datasunrise_t self:netlink_socket create;
+allow datasunrise_t self:packet_socket create;
+allow datasunrise_t self:process { fork signal_perms };
+allow datasunrise_t self:tcp_socket { listen accept } ;
+allow datasunrise_t self:unix_stream_socket create_stream_socket_perms;
+####################
+allow datasunrise_t bin_t:file { execute execute_no_trans };
+allow datasunrise_t cgroup_t:dir search;
+allow datasunrise_t cgroup_t:file { getattr open read };
+allow datasunrise_t cluster_port_t:tcp_socket name_connect;
+allow datasunrise_t commplex_main_port_t :tcp_socket { name_bind name_connect };
+allow datasunrise_t datasunrise_var_t:dir { add_name create getattr open read remove_name rmdir search write };
+allow datasunrise_t datasunrise_var_t:file { append create execute getattr lock open read unlink write };
+allow datasunrise_t datasunrise_port_t:tcp_socket { name_connect name_bind };
+allow datasunrise_t ephemeral_port_t:tcp_socket name_connect;
+allow datasunrise_t fs_t:filesystem getattr;
+allow datasunrise_t gear_port_t:tcp_socket name_connect;
+allow datasunrise_t gluster_port_t:tcp_socket name_connect;
+allow datasunrise_t hplip_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t http_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t keystone_port_t:tcp_socket name_connect;
+allow datasunrise_t ldap_port_t:tcp_socket name_connect;
+allow datasunrise_t mongod_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t mssql_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t mysqld_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t oracle_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t postgresql_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t proc_t:file { getattr open read };
+allow datasunrise_t proc_net_t:file { getattr open read };
+allow datasunrise_t random_device_t:chr_file { getattr open read };
+allow datasunrise_t shell_exec_t:file execute;
+allow datasunrise_t smtp_port_t:tcp_socket name_connect;
+allow datasunrise_t sysctl_net_t:dir search;
+allow datasunrise_t sysctl_net_t:file { getattr open read };
+allow datasunrise_t sysfs_t:dir read;
+allow datasunrise_t sysfs_t:file { getattr open read };
+allow datasunrise_t sysfs_t:lnk_file read;
+allow datasunrise_t tmp_t:dir { add_name create read remove_name write };
+allow datasunrise_t tmp_t:file { create unlink write };
+allow datasunrise_t tmpfs_t:dir { add_name remove_name write };
+allow datasunrise_t tmpfs_t:file { create open read unlink write };
+allow datasunrise_t tmpfs_t:filesystem getattr;
+allow datasunrise_t unreserved_port_t:tcp_socket { name_bind name_connect };
+allow datasunrise_t user_home_dir_t:dir { add_name create getattr search setattr write };
+allow datasunrise_t user_home_dir_t:file { append create getattr ioctl lock open read setattr write };
+allow datasunrise_t usr_t:file { execute execute_no_trans };
+#============= datasunrise_t ==============
+allow datasunrise_t self:netlink_netfilter_socket create;
+#============= groupadd_t ==============
+allow groupadd_t usr_t:fifo_file write;
+#============= rngd_t ==============
+allow rngd_t cert_t:dir search;
+#============= systemd_logind_t ==============
+allow systemd_logind_t cloud_init_t:dbus send_msg;
+#============= useradd_t ==============
+allow useradd_t usr_t:fifo_file write;
+allow datasunrise_t self:process execmem;
+allow datasunrise_t user_home_dir_t:dir remove_name;
+allow datasunrise_t user_home_dir_t:file rename;
+####################
+domain_use_interactive_fds(datasunrise_t)
+files_read_etc_files(datasunrise_t)
+auth_use_nsswitch(datasunrise_t)
+logging_send_syslog_msg(datasunrise_t)
+miscfiles_read_localization(datasunrise_t)
+sysnet_dns_name_resolve(datasunrise_t)
