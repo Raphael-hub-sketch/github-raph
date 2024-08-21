@@ -108,7 +108,7 @@ variable "multi_az_dictionary" {
 
 variable "dictionary_db_storage_size" {
   description = "The size of the database (Gb), minimum restriction by AWS is 20GB"
-  default     = 20
+  default     = 20000
 }
 
 variable "audit_db_class" {
