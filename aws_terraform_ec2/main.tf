@@ -129,7 +129,7 @@ resource "aws_db_instance" "dictionary_db" {
   identifier             = "${var.deployment_name}-dictionary"
   db_name                = var.dictionary_db_name
   engine                 = "Postgres"
-  engine_version         = "15"
+  engine_version         = "25"
   instance_class         = var.dictionary_db_class
   port                   = var.dictionary_db_port
   username               = var.db_username
