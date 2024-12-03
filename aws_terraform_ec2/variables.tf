@@ -129,7 +129,7 @@ variable "multi_az_audit" {
 
 variable "audit_db_storage_size" {
   description = "The size of the database (Gb), minimum restriction by AWS is 20GB"
-  default     = 30
+  default     = 555
 }
 
 variable "db_username" {
