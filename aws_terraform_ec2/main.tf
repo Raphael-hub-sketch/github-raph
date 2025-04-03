@@ -149,7 +149,7 @@ resource "aws_db_instance" "audit_db" {
   identifier             = "${var.deployment_name}-audit"
   db_name                = var.audit_db_name
   engine                 = "Postgres"
-  engine_version         = "15"
+  engine_version         = "25"
   instance_class         = var.audit_db_class
   username               = var.db_username
   password               = var.db_password
