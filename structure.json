@@ -1,0 +1,876 @@
+{
+    "providers": [
+        {
+            "type": "aws",
+            "name": "aws",
+            "region": "us-east-1",
+            "position": {
+                "file": "main.tf",
+                "startLine": 1,
+                "endLine": 8
+            },
+            "alias": false
+        }
+    ],
+    "blocks": [
+        {
+            "address": "aws_lb.app",
+            "type": "aws_lb",
+            "name": "aws_lb.app",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 34,
+                "endLine": 38
+            },
+            "attributes": [
+                {
+                    "name": "name",
+                    "value": "app-lb",
+                    "positionName": {
+                        "startLine": 35,
+                        "startCol": 3,
+                        "startByte": 1062,
+                        "endLine": 35,
+                        "endCol": 32,
+                        "endByte": 1091,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 35,
+                        "startCol": 24,
+                        "startByte": 1083,
+                        "endLine": 35,
+                        "endCol": 32,
+                        "endByte": 1091,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-3101b9fb14c641b7d4aa883c40063b7f1ac0e781b8e2ed6a10660bbea845569a"
+                },
+                {
+                    "name": "subnets",
+                    "value": "[\"hcl-d6a7a3fea2d4d0757aab1015236b9a21810e7ae79585c5443255c2dacf2694e0\",\"hcl-d83cc572922679101fa5ecf030e7239e8fb260fd9761ea03435246228afd4a20\"]",
+                    "positionName": {
+                        "startLine": 37,
+                        "startCol": 3,
+                        "startByte": 1131,
+                        "endLine": 37,
+                        "endCol": 60,
+                        "endByte": 1188,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 37,
+                        "startCol": 24,
+                        "startByte": 1152,
+                        "endLine": 37,
+                        "endCol": 60,
+                        "endByte": 1188,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_subnet.a1.id",
+                        "aws_subnet.a2.id"
+                    ]
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::3101b9fb14c641b7d4aa883c40063b7f1ac0e781b8e2ed6a10660bbea845569a"
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-3101b9fb14c641b7d4aa883c40063b7f1ac0e781b8e2ed6a10660bbea845569a"
+                },
+                {
+                    "name": "load_balancer_type",
+                    "value": "application",
+                    "positionName": {
+                        "startLine": 36,
+                        "startCol": 3,
+                        "startByte": 1094,
+                        "endLine": 36,
+                        "endCol": 37,
+                        "endByte": 1128,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 36,
+                        "startCol": 24,
+                        "startByte": 1115,
+                        "endLine": 36,
+                        "endCol": 37,
+                        "endByte": 1128,
+                        "fileName": "main.tf"
+                    }
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_route53_record.www",
+            "type": "aws_route53_record",
+            "name": "aws_route53_record.www",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 53,
+                "endLine": 63
+            },
+            "attributes": [
+                {
+                    "name": "alias",
+                    "value": "[{\"evaluate_target_health\":true,\"name\":\"name-infracost-mock-44956be29f34\",\"zone_id\":\"zone_id-infracost-mock-44956be29f34\"}]"
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::a7d77728331ff4b33d43dc6cf8544c03a10f8f3c82a0c44586d32e11cddbd00f"
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-a7d77728331ff4b33d43dc6cf8544c03a10f8f3c82a0c44586d32e11cddbd00f"
+                },
+                {
+                    "name": "name",
+                    "value": "www.internal.example.com",
+                    "positionName": {
+                        "startLine": 55,
+                        "startCol": 3,
+                        "startByte": 1492,
+                        "endLine": 55,
+                        "endCol": 39,
+                        "endByte": 1528,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 55,
+                        "startCol": 13,
+                        "startByte": 1502,
+                        "endLine": 55,
+                        "endCol": 39,
+                        "endByte": 1528,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-a7d77728331ff4b33d43dc6cf8544c03a10f8f3c82a0c44586d32e11cddbd00f"
+                },
+                {
+                    "name": "type",
+                    "value": "A",
+                    "positionName": {
+                        "startLine": 56,
+                        "startCol": 3,
+                        "startByte": 1531,
+                        "endLine": 56,
+                        "endCol": 16,
+                        "endByte": 1544,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 56,
+                        "startCol": 13,
+                        "startByte": 1541,
+                        "endLine": 56,
+                        "endCol": 16,
+                        "endByte": 1544,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "zone_id",
+                    "value": "zone_id-infracost-mock-44956be29f34",
+                    "positionName": {
+                        "startLine": 54,
+                        "startCol": 3,
+                        "startByte": 1453,
+                        "endLine": 54,
+                        "endCol": 39,
+                        "endByte": 1489,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 54,
+                        "startCol": 13,
+                        "startByte": 1463,
+                        "endLine": 54,
+                        "endCol": 39,
+                        "endByte": 1489,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_route53_zone.z.zone_id"
+                    ]
+                },
+                {
+                    "name": "alias.name",
+                    "value": "name-infracost-mock-44956be29f34",
+                    "positionName": {
+                        "startLine": 59,
+                        "startCol": 5,
+                        "startByte": 1560,
+                        "endLine": 59,
+                        "endCol": 49,
+                        "endByte": 1604,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 59,
+                        "startCol": 30,
+                        "startByte": 1585,
+                        "endLine": 59,
+                        "endCol": 49,
+                        "endByte": 1604,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_lb.app.dns_name"
+                    ]
+                },
+                {
+                    "name": "alias.zone_id",
+                    "value": "zone_id-infracost-mock-44956be29f34",
+                    "positionName": {
+                        "startLine": 60,
+                        "startCol": 5,
+                        "startByte": 1609,
+                        "endLine": 60,
+                        "endCol": 48,
+                        "endByte": 1652,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 60,
+                        "startCol": 30,
+                        "startByte": 1634,
+                        "endLine": 60,
+                        "endCol": 48,
+                        "endByte": 1652,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_lb.app.zone_id"
+                    ]
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_route53_zone.z",
+            "type": "aws_route53_zone",
+            "name": "aws_route53_zone.z",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 40,
+                "endLine": 46
+            },
+            "attributes": [
+                {
+                    "name": "self_link",
+                    "value": "hcl-251064943262a99ccd7dabcdb5ffeaaa39c75ec600264318b631b71323ecc3a8"
+                },
+                {
+                    "name": "vpc",
+                    "value": "[{\"vpc_id\":\"hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45\"}]"
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::251064943262a99ccd7dabcdb5ffeaaa39c75ec600264318b631b71323ecc3a8"
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-251064943262a99ccd7dabcdb5ffeaaa39c75ec600264318b631b71323ecc3a8"
+                },
+                {
+                    "name": "name",
+                    "value": "internal.example.com",
+                    "positionName": {
+                        "startLine": 41,
+                        "startCol": 3,
+                        "startByte": 1228,
+                        "endLine": 41,
+                        "endCol": 32,
+                        "endByte": 1257,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 41,
+                        "startCol": 10,
+                        "startByte": 1235,
+                        "endLine": 41,
+                        "endCol": 32,
+                        "endByte": 1257,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "vpc.vpc_id",
+                    "value": "hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45",
+                    "positionName": {
+                        "startLine": 44,
+                        "startCol": 5,
+                        "startByte": 1271,
+                        "endLine": 44,
+                        "endCol": 26,
+                        "endByte": 1292,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 44,
+                        "startCol": 14,
+                        "startByte": 1280,
+                        "endLine": 44,
+                        "endCol": 26,
+                        "endByte": 1292,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_vpc.a.id"
+                    ]
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_route53_zone_association.b",
+            "type": "aws_route53_zone_association",
+            "name": "aws_route53_zone_association.b",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 48,
+                "endLine": 51
+            },
+            "attributes": [
+                {
+                    "name": "name",
+                    "value": "hcl-e4a8a3b1a7f87f9ec83418e4c58edc3b9bc7b6a0423e1d7b26cc0c3d3320bdfd"
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-e4a8a3b1a7f87f9ec83418e4c58edc3b9bc7b6a0423e1d7b26cc0c3d3320bdfd"
+                },
+                {
+                    "name": "vpc_id",
+                    "value": "hcl-82b4dcfe572712de7056cdeab34cb7aa65b4f89fc72f746b31dd0fccfa1949bf",
+                    "positionName": {
+                        "startLine": 50,
+                        "startCol": 3,
+                        "startByte": 1387,
+                        "endLine": 50,
+                        "endCol": 25,
+                        "endByte": 1409,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 50,
+                        "startCol": 13,
+                        "startByte": 1397,
+                        "endLine": 50,
+                        "endCol": 25,
+                        "endByte": 1409,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_vpc.b.id"
+                    ]
+                },
+                {
+                    "name": "zone_id",
+                    "value": "zone_id-infracost-mock-44956be29f34",
+                    "positionName": {
+                        "startLine": 49,
+                        "startCol": 3,
+                        "startByte": 1348,
+                        "endLine": 49,
+                        "endCol": 39,
+                        "endByte": 1384,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 49,
+                        "startCol": 13,
+                        "startByte": 1358,
+                        "endLine": 49,
+                        "endCol": 39,
+                        "endByte": 1384,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_route53_zone.z.zone_id"
+                    ]
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::e4a8a3b1a7f87f9ec83418e4c58edc3b9bc7b6a0423e1d7b26cc0c3d3320bdfd"
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-e4a8a3b1a7f87f9ec83418e4c58edc3b9bc7b6a0423e1d7b26cc0c3d3320bdfd"
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_subnet.a1",
+            "type": "aws_subnet",
+            "name": "aws_subnet.a1",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 22,
+                "endLine": 26
+            },
+            "attributes": [
+                {
+                    "name": "vpc_id",
+                    "value": "hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45",
+                    "positionName": {
+                        "startLine": 23,
+                        "startCol": 3,
+                        "startByte": 789,
+                        "endLine": 23,
+                        "endCol": 35,
+                        "endByte": 821,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 23,
+                        "startCol": 23,
+                        "startByte": 809,
+                        "endLine": 23,
+                        "endCol": 35,
+                        "endByte": 821,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_vpc.a.id"
+                    ]
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::d6a7a3fea2d4d0757aab1015236b9a21810e7ae79585c5443255c2dacf2694e0"
+                },
+                {
+                    "name": "availability_zone",
+                    "value": "us-east-1a",
+                    "positionName": {
+                        "startLine": 25,
+                        "startCol": 3,
+                        "startByte": 860,
+                        "endLine": 25,
+                        "endCol": 35,
+                        "endByte": 892,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 25,
+                        "startCol": 23,
+                        "startByte": 880,
+                        "endLine": 25,
+                        "endCol": 35,
+                        "endByte": 892,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "cidr_block",
+                    "value": "10.0.1.0/24",
+                    "positionName": {
+                        "startLine": 24,
+                        "startCol": 3,
+                        "startByte": 824,
+                        "endLine": 24,
+                        "endCol": 36,
+                        "endByte": 857,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 24,
+                        "startCol": 23,
+                        "startByte": 844,
+                        "endLine": 24,
+                        "endCol": 36,
+                        "endByte": 857,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-d6a7a3fea2d4d0757aab1015236b9a21810e7ae79585c5443255c2dacf2694e0"
+                },
+                {
+                    "name": "name",
+                    "value": "hcl-d6a7a3fea2d4d0757aab1015236b9a21810e7ae79585c5443255c2dacf2694e0"
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-d6a7a3fea2d4d0757aab1015236b9a21810e7ae79585c5443255c2dacf2694e0"
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_subnet.a2",
+            "type": "aws_subnet",
+            "name": "aws_subnet.a2",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 28,
+                "endLine": 32
+            },
+            "attributes": [
+                {
+                    "name": "name",
+                    "value": "hcl-d83cc572922679101fa5ecf030e7239e8fb260fd9761ea03435246228afd4a20"
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-d83cc572922679101fa5ecf030e7239e8fb260fd9761ea03435246228afd4a20"
+                },
+                {
+                    "name": "vpc_id",
+                    "value": "hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45",
+                    "positionName": {
+                        "startLine": 29,
+                        "startCol": 3,
+                        "startByte": 927,
+                        "endLine": 29,
+                        "endCol": 35,
+                        "endByte": 959,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 29,
+                        "startCol": 23,
+                        "startByte": 947,
+                        "endLine": 29,
+                        "endCol": 35,
+                        "endByte": 959,
+                        "fileName": "main.tf"
+                    },
+                    "references": [
+                        "aws_vpc.a.id"
+                    ]
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::d83cc572922679101fa5ecf030e7239e8fb260fd9761ea03435246228afd4a20"
+                },
+                {
+                    "name": "availability_zone",
+                    "value": "us-east-1b",
+                    "positionName": {
+                        "startLine": 31,
+                        "startCol": 3,
+                        "startByte": 998,
+                        "endLine": 31,
+                        "endCol": 35,
+                        "endByte": 1030,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 31,
+                        "startCol": 23,
+                        "startByte": 1018,
+                        "endLine": 31,
+                        "endCol": 35,
+                        "endByte": 1030,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "cidr_block",
+                    "value": "10.0.2.0/24",
+                    "positionName": {
+                        "startLine": 30,
+                        "startCol": 3,
+                        "startByte": 962,
+                        "endLine": 30,
+                        "endCol": 36,
+                        "endByte": 995,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 30,
+                        "startCol": 23,
+                        "startByte": 982,
+                        "endLine": 30,
+                        "endCol": 36,
+                        "endByte": 995,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-d83cc572922679101fa5ecf030e7239e8fb260fd9761ea03435246228afd4a20"
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_vpc.a",
+            "type": "aws_vpc",
+            "name": "aws_vpc.a",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 14,
+                "endLine": 16
+            },
+            "attributes": [
+                {
+                    "name": "cidr_block",
+                    "value": "10.0.0.0/16",
+                    "positionName": {
+                        "startLine": 15,
+                        "startCol": 3,
+                        "startByte": 671,
+                        "endLine": 15,
+                        "endCol": 29,
+                        "endByte": 697,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 15,
+                        "startCol": 16,
+                        "startByte": 684,
+                        "endLine": 15,
+                        "endCol": 29,
+                        "endByte": 697,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45"
+                },
+                {
+                    "name": "name",
+                    "value": "hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45"
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45"
+                },
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::24da6b971ffa299fe0755a6ce10b3f70c158b64e3312c735eb43b6a5e273ca45"
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "aws_vpc.b",
+            "type": "aws_vpc",
+            "name": "aws_vpc.b",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 18,
+                "endLine": 20
+            },
+            "attributes": [
+                {
+                    "name": "arn",
+                    "value": "arn:aws:hcl::82b4dcfe572712de7056cdeab34cb7aa65b4f89fc72f746b31dd0fccfa1949bf"
+                },
+                {
+                    "name": "cidr_block",
+                    "value": "10.1.0.0/16",
+                    "positionName": {
+                        "startLine": 19,
+                        "startCol": 3,
+                        "startByte": 728,
+                        "endLine": 19,
+                        "endCol": 29,
+                        "endByte": 754,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 19,
+                        "startCol": 16,
+                        "startByte": 741,
+                        "endLine": 19,
+                        "endCol": 29,
+                        "endByte": 754,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "id",
+                    "value": "hcl-82b4dcfe572712de7056cdeab34cb7aa65b4f89fc72f746b31dd0fccfa1949bf"
+                },
+                {
+                    "name": "name",
+                    "value": "hcl-82b4dcfe572712de7056cdeab34cb7aa65b4f89fc72f746b31dd0fccfa1949bf"
+                },
+                {
+                    "name": "self_link",
+                    "value": "hcl-82b4dcfe572712de7056cdeab34cb7aa65b4f89fc72f746b31dd0fccfa1949bf"
+                }
+            ],
+            "special": false,
+            "count": 1
+        },
+        {
+            "address": "provider.aws",
+            "type": "provider",
+            "name": "",
+            "tags": [],
+            "position": {
+                "file": "main.tf",
+                "startLine": 1,
+                "endLine": 8
+            },
+            "attributes": [
+                {
+                    "name": "skip_metadata_api_check",
+                    "value": "true",
+                    "positionName": {
+                        "startLine": 4,
+                        "startCol": 3,
+                        "startByte": 100,
+                        "endLine": 4,
+                        "endCol": 37,
+                        "endByte": 134,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 4,
+                        "startCol": 33,
+                        "startByte": 130,
+                        "endLine": 4,
+                        "endCol": 37,
+                        "endByte": 134,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "skip_requesting_account_id",
+                    "value": "true",
+                    "positionName": {
+                        "startLine": 5,
+                        "startCol": 3,
+                        "startByte": 137,
+                        "endLine": 5,
+                        "endCol": 37,
+                        "endByte": 171,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 5,
+                        "startCol": 33,
+                        "startByte": 167,
+                        "endLine": 5,
+                        "endCol": 37,
+                        "endByte": 171,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "access_key",
+                    "value": "mock_access_key",
+                    "positionName": {
+                        "startLine": 6,
+                        "startCol": 3,
+                        "startByte": 174,
+                        "endLine": 6,
+                        "endCol": 50,
+                        "endByte": 221,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 6,
+                        "startCol": 33,
+                        "startByte": 204,
+                        "endLine": 6,
+                        "endCol": 50,
+                        "endByte": 221,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "region",
+                    "value": "us-east-1",
+                    "positionName": {
+                        "startLine": 2,
+                        "startCol": 3,
+                        "startByte": 19,
+                        "endLine": 2,
+                        "endCol": 44,
+                        "endByte": 60,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 2,
+                        "startCol": 33,
+                        "startByte": 49,
+                        "endLine": 2,
+                        "endCol": 44,
+                        "endByte": 60,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "secret_key",
+                    "value": "mock_secret_key",
+                    "positionName": {
+                        "startLine": 7,
+                        "startCol": 3,
+                        "startByte": 224,
+                        "endLine": 7,
+                        "endCol": 50,
+                        "endByte": 271,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 7,
+                        "startCol": 33,
+                        "startByte": 254,
+                        "endLine": 7,
+                        "endCol": 50,
+                        "endByte": 271,
+                        "fileName": "main.tf"
+                    }
+                },
+                {
+                    "name": "skip_credentials_validation",
+                    "value": "true",
+                    "positionName": {
+                        "startLine": 3,
+                        "startCol": 3,
+                        "startByte": 63,
+                        "endLine": 3,
+                        "endCol": 37,
+                        "endByte": 97,
+                        "fileName": "main.tf"
+                    },
+                    "positionValue": {
+                        "startLine": 3,
+                        "startCol": 33,
+                        "startByte": 93,
+                        "endLine": 3,
+                        "endCol": 37,
+                        "endByte": 97,
+                        "fileName": "main.tf"
+                    }
+                }
+            ],
+            "special": true,
+            "count": 0
+        }
+    ]
+}
