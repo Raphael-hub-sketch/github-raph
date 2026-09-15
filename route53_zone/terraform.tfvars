@@ -1,0 +1,9 @@
+aws_region              = "us-east-1"
+domain_name             = "example.com"
+environment             = "prod"
+project_name            = "infra-core"
+owner                   = "devops-team"
+cost_center             = "CC-1042"
+enable_dnssec           = false
+create_query_log        = true
+query_log_retention_days = 30
