@@ -1,0 +1,12 @@
+aws_region                  = "us-east-1"
+environment                 = "prod"
+project_name                = "infra-core"
+owner                       = "devops-team"
+cost_center                 = "CC-1042"
+profile_name                = "centralized-dns-profile"
+resource_association_name   = "vpc-endpoint-association"
+resource_arn                = "arn:aws:route53:us-east-1:123456789012:hostedzone/Z123456789ABC"
+resource_properties         = null
+vpc_cidr                    = "10.0.0.0/16"
+create_vpc                  = true
+associate_profile_with_vpc  = true
