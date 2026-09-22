@@ -285,4 +285,31 @@ locals {
       supports_props  = true
     }
     "FirewallRuleGroup" = {
-      description     = "DNS Firewall
+      description     = "DNS Firewall rule group"
+      arn_pattern     = "arn:aws:route53resolver:*:*:firewall-rule-group/rslvr-frg-*"
+      billing_impact  = "firewall_query_pricing"
+      supports_props  = true
+      example_props   = jsonencode({ priority = 102 })
+    }
+    "VpcEndpoint" = {
+      description     = "Interface VPC endpoint"
+      arn_pattern     = "arn:aws:ec2:*:*:vpc-endpoint/vpce-*"
+      billing_impact  = "vpc_endpoint_hourly"
+      supports_props  = true
+      known_issue     = "Провайдер может возвращать inconsistent result для resource_properties"
+    }
+  }
+
+  # ------------------------------------------------------------------
+  # СЕКЦИЯ 8: Проверка лимитов и квот (имитация)
+  # ------------------------------------------------------------------
+  quota_checks = {
+    max_resource_associations_per_profile = 100
+    max_profiles_per_account              = 10
+    max_vpc_associations_per_profile      = 1000
+    current_resource_associations         = local.profiles_usage.resource_associations
+    current_vpc_associations              = local.profiles_usage.vpc_associations
+    resource_assoc_ok                     = local.profiles_usage.resource_associations <= 100
+    vpc_assoc_ok                          = local.profiles_usage.vpc_associations <= 1000
+  }
+}
