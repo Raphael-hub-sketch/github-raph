@@ -1,0 +1,12 @@
+aws_region                   = "us-east-1"
+environment                  = "prod"
+project_name                 = "infra-core"
+owner                        = "devops-team"
+cost_center                  = "CC-1042"
+vpc_cidr                     = "10.0.0.0/16"
+create_vpc                   = true
+query_log_config_name        = "dns-query-log-config"
+log_destination_type         = "cloudwatch"
+cloudwatch_log_retention_days = 30
+s3_log_retention_days        = 90
+estimated_log_volume_gb      = 50
