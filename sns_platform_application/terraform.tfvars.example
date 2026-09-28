@@ -1,0 +1,28 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "sns-push-demo"
+
+# Параметры platform application
+platform_application_name = null  # Автогенерация, если null
+platform                  = "GCM" # APNS, APNS_SANDBOX, GCM, ADM, BAIDU
+
+# platform_credential — для GCM/FCM это API Key
+platform_credential = "your-gcm-api-key-here"
+
+# platform_principal — для APNS это сертификат
+# platform_principal = "your-apns-certificate-here"
+
+# Создание event topics и feedback roles
+create_event_topics   = true
+create_feedback_roles = true
+
+success_feedback_sample_rate = 100
+
+# Параметры для имитации затрат
+monthly_push_notifications = 1000000
+monthly_api_requests       = 500000
+monthly_endpoint_operations = 10000
