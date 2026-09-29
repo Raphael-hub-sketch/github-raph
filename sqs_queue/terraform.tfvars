@@ -1,0 +1,16 @@
+aws_region                    = "us-east-1"
+environment                   = "prod"
+project_name                  = "infra-core"
+owner                         = "devops-team"
+cost_center                   = "CC-1042"
+queue_name                    = "notifications-queue"
+fifo_queue                    = false
+content_based_deduplication   = false
+visibility_timeout_seconds    = 30
+message_retention_seconds     = 345600
+max_message_size              = 262144
+receive_wait_time_seconds     = 10
+delay_seconds                 = 0
+sqs_managed_sse_enabled       = true
+create_dlq                    = true
+max_receive_count             = 5
