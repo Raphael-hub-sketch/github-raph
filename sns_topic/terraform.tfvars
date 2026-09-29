@@ -1,0 +1,12 @@
+aws_region                      = "us-east-1"
+environment                     = "prod"
+project_name                    = "infra-core"
+owner                           = "devops-team"
+cost_center                     = "CC-1042"
+topic_name                      = "notifications-topic"
+display_name                    = "Notifications Topic"
+fifo_topic                      = false
+content_based_deduplication     = false
+kms_master_key_id               = null
+create_topic_policy             = true
+allowed_publish_principals      = ["arn:aws:iam::123456789012:root"]
