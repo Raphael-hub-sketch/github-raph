@@ -1,0 +1,31 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "secrets-rotation-demo"
+
+# Параметры секрета
+secret_name                    = null  # Автогенерация, если null
+secret_description             = "Demo secret with automatic rotation"
+secret_recovery_window_in_days = 7
+
+# Параметры ротации
+enable_rotation                   = true
+rotation_automatically_after_days = 30
+rotation_duration                 = "3h"
+# rotation_schedule_expression    = "rate(30 days)"  # Альтернатива automatically_after_days
+
+# Параметры Lambda для ротации
+create_rotation_lambda    = true
+lambda_runtime            = "python3.12"
+lambda_timeout            = 30
+lambda_memory_size        = 128
+# existing_rotation_lambda_arn = "arn:aws:lambda:us-east-1:123456789012:function:existing-rotation"
+
+# Параметры для имитации затрат
+monthly_secret_count         = 10
+monthly_api_calls            = 50000
+monthly_rotation_invocations = 30
+lambda_execution_duration_ms = 500
