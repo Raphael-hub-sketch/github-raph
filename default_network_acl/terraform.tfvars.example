@@ -1,0 +1,43 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "default-nacl-demo"
+
+# Параметры VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Правила Ingress (по умолчанию — разрешить весь трафик)
+ingress_rules = [
+  {
+    rule_no    = 100
+    action     = "allow"
+    protocol   = "-1"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 0
+    to_port    = 0
+  }
+]
+
+# Правила Egress (по умолчанию — разрешить весь трафик)
+egress_rules = [
+  {
+    rule_no    = 100
+    action     = "allow"
+    protocol   = "-1"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 0
+    to_port    = 0
+  }
+]
+
+# Управление ассоциациями подсетей (по умолчанию — false)
+manage_subnet_associations = false
+subnet_ids                 = []
+ignore_subnet_changes      = true
+
+# Параметры для имитации затрат
+monthly_data_processed_gb = 1000
+monthly_rule_evaluations  = 10000000
