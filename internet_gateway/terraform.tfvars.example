@@ -1,0 +1,22 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "igw-demo"
+
+# Параметры VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Имя Internet Gateway (если null — автогенерация)
+igw_name = null
+
+# Количество подсетей
+public_subnet_count  = 2
+private_subnet_count = 2
+
+# Параметры для имитации затрат
+monthly_egress_gb  = 1000
+monthly_ingress_gb = 500
+include_free_tier  = true
