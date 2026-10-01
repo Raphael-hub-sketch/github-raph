@@ -1,0 +1,25 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "nat-gateway-demo"
+
+# Параметры VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Параметры NAT Gateway
+# 1 = экономия (dev/staging), 2-3 = HA (production)
+nat_gateway_count = 1
+connectivity_type = "public"
+nat_gateway_name  = null
+
+# Количество подсетей
+public_subnet_count  = 2
+private_subnet_count = 2
+
+# Параметры для имитации затрат
+monthly_data_processed_gb  = 1000
+monthly_hours              = 730
+include_public_ipv4_cost   = true
