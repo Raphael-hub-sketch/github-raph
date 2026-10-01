@@ -1,0 +1,40 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "default-sg-demo"
+
+# Параметры VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Правила Ingress (по умолчанию — self-referencing rule, как у AWS)
+ingress_rules = [
+  {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    self        = true
+    description = "Allow inbound from same security group"
+  }
+]
+
+# Правила Egress (по умолчанию — разрешить весь IPv4 трафик)
+egress_rules = [
+  {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "Allow all outbound IPv4 traffic"
+  }
+]
+
+# Управление правилами
+manage_ingress_rules = true
+manage_egress_rules  = true
+
+# Параметры для имитации затрат
+monthly_data_processed_gb = 1000
+monthly_rule_evaluations  = 50000000
