@@ -1,0 +1,32 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "eni-demo"
+
+# Параметры VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Параметры Network Interface
+eni_count       = 2
+eni_description = "Demo network interface managed by Terraform"
+
+# Приватные IP (null для автоматического назначения)
+private_ips       = null
+private_ips_count = 1
+
+# Проверка источника/назначения
+enable_source_dest_check = true
+
+# Количество подсетей
+subnet_count = 2
+
+# Параметры для имитации затрат
+enable_public_ip                = false
+enable_traffic_mirroring        = false
+traffic_mirroring_sessions      = 1
+enable_network_access_analyzer  = false
+network_access_analyzer_evaluations = 5
+monthly_hours                   = 730
