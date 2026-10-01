@@ -1,0 +1,86 @@
+# terraform.tfvars.example
+# Скопируйте этот файл в terraform.tfvars и настройте под себя.
+# НЕ КОММИТЬТЕ terraform.tfvars с реальными данными!
+
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "nacl-demo"
+
+# Параметры VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Имя Network ACL (если null — автогенерация)
+nacl_name = null
+
+# Количество подсетей
+public_subnet_count  = 2
+private_subnet_count = 2
+
+# Правила Ingress (пример: HTTP, HTTPS, SSH, ephemeral)
+ingress_rules = [
+  {
+    rule_no    = 100
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 80
+    to_port    = 80
+  },
+  {
+    rule_no    = 110
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 443
+    to_port    = 443
+  },
+  {
+    rule_no    = 120
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "10.0.0.0/16"
+    from_port  = 22
+    to_port    = 22
+  },
+  {
+    rule_no    = 130
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "10.0.0.0/16"
+    from_port  = 1024
+    to_port    = 65535
+  }
+]
+
+# Правила Egress (пример: HTTP, HTTPS, ephemeral)
+egress_rules = [
+  {
+    rule_no    = 100
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 80
+    to_port    = 80
+  },
+  {
+    rule_no    = 110
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 443
+    to_port    = 443
+  },
+  {
+    rule_no    = 120
+    action     = "allow"
+    protocol   = "tcp"
+    cidr_block = "10.0.0.0/16"
+    from_port  = 1024
+    to_port    = 65535
+  }
+]
+
+# Параметры для имитации затрат
+monthly_data_processed_gb = 1000
+cross_az_data_gb          = 100
+include_nat_cost          = false
