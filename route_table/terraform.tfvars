@@ -1,0 +1,15 @@
+aws_region                  = "us-east-1"
+environment                 = "prod"
+project_name                = "infra-core"
+owner                       = "devops-team"
+cost_center                 = "CC-1042"
+vpc_cidr                    = "10.0.0.0/16"
+public_subnet_cidrs         = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs        = ["10.0.11.0/24", "10.0.12.0/24"]
+create_public_route_table   = true
+create_private_route_table  = true
+create_nat_gateway          = true
+create_vpc_endpoints        = false
+monthly_data_processed_gb   = 100
+enable_transit_gateway      = false
+transit_gateway_attachments = 1
