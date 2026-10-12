@@ -1,0 +1,15 @@
+aws_region                 = "us-east-1"
+environment                = "prod"
+project_name               = "infra-core"
+owner                      = "devops-team"
+cost_center                = "CC-1042"
+vpc_cidr                   = "10.0.0.0/16"
+sg_name                    = "app-security-group"
+sg_description             = "Security group for application tier"
+allowed_ssh_cidrs          = ["10.0.0.0/8"]
+allowed_http_cidrs         = ["0.0.0.0/0"]
+app_port                   = 8080
+create_alb_sg              = true
+create_db_sg               = true
+enable_flow_logs           = false
+flow_logs_retention_days   = 14
