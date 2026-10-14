@@ -1,0 +1,13 @@
+aws_region              = "us-east-1"
+environment             = "prod"
+project_name            = "infra-core"
+owner                   = "devops-team"
+cost_center             = "CC-1042"
+endpoint_name           = "centralized-resolver-endpoint"
+endpoint_direction      = "INBOUND"
+resolver_endpoint_type  = "IPV4"
+protocols               = ["Do53"]
+vpc_cidr                = "10.0.0.0/16"
+subnet_cidrs            = ["10.0.1.0/24", "10.0.2.0/24"]
+allowed_cidr_blocks     = ["10.0.0.0/16"]
+create_vpc              = true
