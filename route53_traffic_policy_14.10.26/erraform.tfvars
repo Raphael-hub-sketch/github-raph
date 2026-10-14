@@ -1,0 +1,14 @@
+aws_region              = "us-east-1"
+environment             = "prod"
+project_name            = "infra-core"
+owner                   = "devops-team"
+cost_center             = "CC-1042"
+policy_name             = "failover-policy"
+policy_comment          = "Active-passive failover policy managed by Terraform"
+record_type             = "A"
+primary_endpoint_value  = "primary.example.com"
+secondary_endpoint_value = "secondary.example.com"
+create_instance         = false
+hosted_zone_id          = ""
+instance_name           = "app.example.com"
+instance_ttl            = 300
