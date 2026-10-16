@@ -1,0 +1,15 @@
+aws_region                    = "us-east-1"
+environment                   = "prod"
+project_name                  = "infra-core"
+owner                         = "devops-team"
+cost_center                   = "CC-1042"
+vpc_cidr                      = "10.0.0.0/16"
+public_subnet_cidrs           = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+private_subnet_cidrs          = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
+database_subnet_cidrs         = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
+availability_zones            = ["us-east-1a", "us-east-1b", "us-east-1c"]
+map_public_ip_on_launch       = true
+enable_dns64                  = false
+assign_ipv6_address_on_creation = false
+create_nat_gateway            = true
+nat_gateways_count            = 3
