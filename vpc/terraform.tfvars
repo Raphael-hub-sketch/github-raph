@@ -1,0 +1,14 @@
+aws_region                     = "us-east-1"
+environment                    = "prod"
+project_name                   = "infra-core"
+owner                          = "devops-team"
+cost_center                    = "CC-1042"
+vpc_cidr                       = "10.0.0.0/16"
+instance_tenancy               = "default"
+enable_dns_support             = true
+enable_dns_hostnames           = true
+assign_generated_ipv6_cidr_block = false
+create_nat_gateway             = true
+nat_gateways_count             = 3
+nat_data_gb_per_month          = 100
+public_ipv4_addresses_count    = 3
