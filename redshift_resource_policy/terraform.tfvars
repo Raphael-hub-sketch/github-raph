@@ -1,0 +1,15 @@
+aws_region                = "us-east-1"
+environment               = "prod"
+project_name              = "infra-core"
+owner                     = "devops-team"
+cost_center               = "CC-1042"
+cluster_identifier        = "analytics-cluster"
+node_type                 = "ra3.xlplus"
+number_of_nodes           = 2
+database_name             = "analytics"
+master_username           = "adminuser"
+master_password           = "TempPassword123!"
+allowed_aws_account_id    = "123456789012"
+enable_concurrency_scaling = false
+spectrum_data_scanned_tb  = 1
+storage_gb                = 500
