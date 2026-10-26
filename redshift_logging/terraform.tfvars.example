@@ -1,0 +1,18 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "redshift-logging-demo"
+
+vpc_cidr = "10.0.0.0/16"
+
+redshift_node_type       = "dc2.large"
+redshift_node_count      = 2
+redshift_database_name   = "demodb"
+redshift_master_username = "adminuser"
+redshift_master_password = "DemoPass123!"
+
+log_destination_type = "s3"
+log_exports          = ["connectionlog", "userlog"]
+s3_key_prefix        = "redshift-logs/"
+
+monthly_log_storage_gb = 10
+monthly_hours          = 730
