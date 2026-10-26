@@ -1,0 +1,19 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "redshift-event-sub-demo"
+
+vpc_cidr = "10.0.0.0/16"
+
+redshift_node_type       = "dc2.large"
+redshift_node_count      = 2
+redshift_database_name   = "demodb"
+redshift_master_username = "adminuser"
+redshift_master_password = "DemoPass123!"
+
+subscription_name = "redshift-event-sub"
+severity          = "INFO"
+event_categories  = ["configuration", "management", "monitoring", "security"]
+enabled           = true
+
+monthly_hours             = 730
+monthly_sns_notifications = 1000
