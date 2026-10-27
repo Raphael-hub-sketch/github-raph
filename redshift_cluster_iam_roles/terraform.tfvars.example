@@ -1,0 +1,17 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "redshift-iam-roles-demo"
+
+vpc_cidr = "10.0.0.0/16"
+
+redshift_node_type       = "dc2.large"
+redshift_node_count      = 2
+redshift_database_name   = "demodb"
+redshift_master_username = "adminuser"
+redshift_master_password = "DemoPass123!"
+
+iam_role_arns        = []
+default_iam_role_arn = null
+
+monthly_hours        = 730
+spectrum_scanned_tb  = 0
