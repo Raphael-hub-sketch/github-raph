@@ -1,0 +1,18 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "redshift-endpoint-access-demo"
+
+vpc_cidr = "10.0.0.0/16"
+
+redshift_node_type       = "dc2.large"
+redshift_node_count      = 2
+redshift_database_name   = "demodb"
+redshift_master_username = "adminuser"
+redshift_master_password = "DemoPass123!"
+
+endpoint_name      = "demo-endpoint"
+resource_owner     = null
+vpc_security_group_ids = []
+
+monthly_hours              = 730
+monthly_data_processed_gb  = 0
